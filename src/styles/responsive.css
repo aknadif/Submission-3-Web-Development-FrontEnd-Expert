@@ -59,6 +59,9 @@
         grid-column-start: 1;
         grid-column-end: 3;
     }
+    .app-bar .app-bar__navigation ul li a {
+        font-size: 18px;
+      }
   }
    
   @media screen and (min-width: 800px) {

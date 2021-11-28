@@ -104,4 +104,10 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export { createCardItemTemplate, createCardDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+const loader = () => `
+  <div class="loader-wrapper">
+    <div class="spinner"></div>
+  </div>
+`;
+
+export { createCardItemTemplate, createCardDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate, loader };

@@ -1,21 +1,15 @@
 // eslint-disable-next-line import/extensions
 import DbSource from "../../data/db-source.js";
-import { createCardItemTemplate } from "../templates/template-creator";
+import "../../components/hero";
+import { createCardItemTemplate, loader } from "../templates/template-creator";
 
 const Home = {
   async render() {
     return `
-    <section class="hero">
-    <img src="./images/hero-image.jpg" alt="hero">
-    <div class="text">
-        <h1>Burger Pub</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae ex officiis rem odio,
-            voluptatibus, fugiat assumenda blanditiis dignissimos tempora id expedita asperiores voluptate
-            dolorem.</p>
-        </div>
-    </section>
-
-    <div class="content">
+    <div id="loading"></div>
+  
+    <div class="content" id="content">
+    <cost-hero></cost-hero>
         <h2 class="content__heading">Restaurants</h2>
         <div id="cards" class="cards">
  
@@ -25,12 +19,26 @@ const Home = {
   },
 
   async afterRender() {
-    await DbSource.list();
-    const cards = await DbSource.list();
+    const loading = document.querySelector("#loading");
     const cardsContainer = document.querySelector("#cards");
-    cards.restaurants.forEach((card) => {
-      cardsContainer.innerHTML += createCardItemTemplate(card);
-    });
+    const content = document.querySelector("#content");
+
+    content.style.display = "none";
+    loading.innerHTML = loader();
+
+    try {
+      const cards = await DbSource.list();
+      cards.restaurants.forEach((card) => {
+        cardsContainer.innerHTML += createCardItemTemplate(card);
+      });
+      loading.style.display = "none";
+      content.style.display = "block";
+    } catch (error) {
+      console.error(error);
+      loading.style.display = "none";
+      content.style.display = "none";
+      content.innerHTML = `Error: ${err.message}`;
+    }
   },
 };
 

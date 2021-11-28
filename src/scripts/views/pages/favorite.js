@@ -17,6 +17,11 @@ const Favorite = {
   async afterRender() {
     const cards = await FavoriteRestoIdb.getAllRestos();
     const cardsContainer = document.querySelector("#cards");
+    if (cards.length === 0) {
+      cardsContainer.innerHTML = `
+      <p class="empty">Restaurant favorite kosong, silahkan klik tombol hati di halaman detail.</p>
+      `;
+    }
     cards.forEach((card) => {
       cardsContainer.innerHTML += createCardItemTemplate(card);
     });
