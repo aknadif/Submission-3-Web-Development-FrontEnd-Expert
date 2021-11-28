@@ -113,6 +113,7 @@ main {
   grid-template-columns: 1fr;
   gap: 16px;
   margin: 32px 0;
+  padding: 50px;
 }
 
 
@@ -252,6 +253,25 @@ main {
 .detail-review-item:hover {
   box-shadow: 0px 10px 13px -7px var(--d),
     5px 5px 15px 5px var(--d);
+}
+/*
+   Like
+*/
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: var(--b);
+  color: var(--white);
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*
