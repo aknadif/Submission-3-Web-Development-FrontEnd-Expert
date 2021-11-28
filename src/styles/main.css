@@ -1,0 +1,24 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Variable */
+
+:root {
+    --white: #ffffff;
+    --a: #22223b;
+    --b: #4a4e69;
+    --c: #9a8c98;
+    --d: #c9ada7;
+    --e: #f2e9e4;
+}

@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*
+    AppBar
+  */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: var(--a);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--d);
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: var(--d);
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: var(--a);
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+  width: 100%;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--d);
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  color: var(--e);
+}
+
+/*
+    Main Content
+  */
+
+main {
+  padding: 0;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/*
+    Cards
+  */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+
+/*
+    card Item
+  */
+
+.card-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.card-item:hover {
+  background-color: var(--e);
+}
+
+.card-item__header {
+  position: relative;
+}
+
+.card-item .card-item__header .card-item__header__img {
+  width: 100%;
+}
+
+.card-item .card-item__header .card-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: var(--white);
+}
+
+.card-item .card-item__header .card-item__header__rating .card-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.card-item .card-item__content {
+  padding: 16px;
+}
+
+.card-item .card-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.card-item .card-item__content h3 a {
+  color: var(--b);
+  text-decoration: none;
+}
+
+.card-item .card-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
+/*
+    card
+  */
+
+.card {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.card .card__img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.card .card__info h4 {
+  margin: 8px 0;
+}
+
+.card .card__title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* review */
+.detail-review {
+  max-width: 100%;
+  font-size: 1em;
+  text-align: center;
+}
+
+.detail-review-item {
+  color: var(--font-color);
+  background-color: var(--e);
+  margin-bottom: 1.5em;
+  padding: 1em 1em;
+  border-radius: 5px;
+}
+
+.detail-review-item:last-child {
+  margin-bottom: 0;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  color: var(--btn);
+  border-bottom: 1px solid var(--b);
+}
+
+.review-name {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.review-date {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+.review-body {
+  padding: 1em;
+  text-align: left;
+}
+
+.detail-review-item:hover {
+  box-shadow: 0px 10px 13px -7px var(--d),
+    5px 5px 15px 5px var(--d);
+}
+
+/*
+    Footer
+  */
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: var(--a);
+  text-decoration: none;
+}
