@@ -63,10 +63,10 @@
         font-size: 18px;
       }
       footer p {
-        font-size: 22px;
+        font-size: 36px;
       }
       .card-item .card-item__content h3 {
-        font-size: 22px;
+        font-size: 36px;
       }
   }
    
@@ -86,6 +86,12 @@
     .cards {
         grid-template-columns: repeat(4, 1fr);
     }
+    footer p {
+        font-size: 22px;
+      }
+      .card-item .card-item__content h3 {
+        font-size: 22px;
+      }
   }
    
   @media screen and (min-width: 1600px) {
