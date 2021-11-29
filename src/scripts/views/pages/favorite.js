@@ -1,4 +1,4 @@
-import FavoriteRestoIdb from "../../data/favoriteresto-idb.js";
+import FavoriteRestoIdb from "../../data/favoriteresto-idb";
 import { createCardItemTemplate } from "../templates/template-creator";
 
 const Favorite = {

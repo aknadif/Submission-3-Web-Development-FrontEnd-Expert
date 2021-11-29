@@ -8,6 +8,7 @@ const CacheHelper = {
 
   async deleteOldCache() {
     const cacheNames = await caches.keys();
+    // eslint-disable-next-line max-len
     cacheNames.filter((name) => name !== CONFIG.CACHE_NAME).map((filteredName) => caches.delete(filteredName));
   },
 

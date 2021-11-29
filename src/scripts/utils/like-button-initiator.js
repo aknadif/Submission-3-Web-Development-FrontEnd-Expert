@@ -1,4 +1,4 @@
-import FavoriteRestoIdb from "../data/favoriteresto-idb.js";
+import FavoriteRestoIdb from "../data/favoriteresto-idb";
 import { createLikeButtonTemplate, createLikedButtonTemplate } from "../views/templates/template-creator";
 
 const LikeButtonInitiator = {

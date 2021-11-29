@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/extensions
-import DbSource from "../../data/db-source.js";
+import DbSource from "../../data/db-source";
 import "../../components/hero";
 import { createCardItemTemplate, loader } from "../templates/template-creator";
 
@@ -37,7 +37,7 @@ const Home = {
       console.error(error);
       loading.style.display = "none";
       content.style.display = "none";
-      content.innerHTML = `Error: ${err.message}`;
+      content.innerHTML = `Error: ${error.message}`;
     }
   },
 };

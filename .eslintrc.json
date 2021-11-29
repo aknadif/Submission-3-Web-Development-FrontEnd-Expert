@@ -14,9 +14,12 @@
     "rules": {
         "semi": ["error", "always"],
         "quotes": ["error", "double"],
+        "no-console": "off",
         "linebreak-style": 0,
         "import/prefer-default-export": "off",
         "no-underscore-dangle": "off",
-        "import/no-extraneous-dependencies": "error"
+        "import/no-extraneous-dependencies": "error",
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        "object-curly-newline": ["error", {"multiline": true}]
     }
 }

@@ -65,6 +65,9 @@
       footer p {
         font-size: 22px;
       }
+      .card-item .card-item__content h3 {
+        font-size: 22px;
+      }
   }
    
   @media screen and (min-width: 800px) {

@@ -110,4 +110,5 @@ const loader = () => `
   </div>
 `;
 
+// eslint-disable-next-line max-len
 export { createCardItemTemplate, createCardDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate, loader };
