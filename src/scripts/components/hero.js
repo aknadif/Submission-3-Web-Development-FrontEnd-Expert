@@ -6,7 +6,11 @@ class Hero extends HTMLElement {
   render() {
     this.innerHTML = `
     <section class="hero">
-    <img src="./images/hero-image.jpg" alt="hero">
+    <picture>
+    <source type="image/webp" srcset="./images/hero-image.webp">
+    <source type="image/jpeg" srcset="./images/hero-image.jpg">
+      <img src="./images/hero-image.jpg" alt="hero">
+    </picture>
     <div class="text">
         <h1>Burger Pub</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam recusandae ex officiis rem odio,

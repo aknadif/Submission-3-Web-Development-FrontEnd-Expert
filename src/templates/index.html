@@ -4,12 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#22223b"/>
+  <meta name="theme-color" content="#22223b" />
   <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
   <link rel="manifest" href="manifest.json">
   <meta name="description" content="Recommendation Burger Information For Everyone">
-  <link rel="icon" href="favicon.png">
-  <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preload" crossorigin="anonymous"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
+  </noscript>
   <title>Burger Pub</title>
 </head>
 
@@ -18,23 +23,23 @@
   <!-- Navbar -->
   <header class="app-bar">
     <div class="app-bar__menu">
-    <button id="hamburgerButton">☰</button>
-  </div>
-  <div class="app-bar__brand">
-    <h1>Burger Pub</h1>
-  </div>
-  <nav id="navigationDrawer" class="app-bar__navigation">
-    <ul>
-      <li><a href="#/home">Home</a></li>
-      <li><a href="#/favorite">Favorite</a></li>
-      <li><a href="http://aknadhif.me/">About Us</a></li>
-    </ul>
-  </nav>
+      <button id="hamburgerButton">☰</button>
+    </div>
+    <div class="app-bar__brand">
+      <h1>Burger Pub</h1>
+    </div>
+    <nav id="navigationDrawer" class="app-bar__navigation">
+      <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/favorite">Favorite</a></li>
+        <li><a href="http://aknadhif.me/">About Us</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Main Content -->
   <main id="mainContent" tabindex="0"></main>
-  
+
   <!-- Footer -->
   <comp-footer></comp-footer>
 </body>

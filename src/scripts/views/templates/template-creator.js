@@ -76,10 +76,10 @@ const createCardDetailTemplate = (card) => `
 
 const createCardItemTemplate = (card) => `
   <div class="card-item">
-  <a href="${`/#/detail/${card.id}`}">
+  <a href="${`/#/detail/${card.id}`}" aria-label="${card.name}">
     <div class="card-item__header">
-        <img class="card-item__header__img" alt="${card.name}"
-            src="${CONFIG.BASE_URL}images/medium/${card.pictureId}">
+        <img width="230" height="160" class="card-item__header__img" alt="${card.name}"
+            src="${CONFIG.BASE_URL}images/small/${card.pictureId}">
         <div class="card-item__header__rating">
             <p>⭐️<span class="card-item__header__rating__score">${card.rating}</span></p>
         </div>

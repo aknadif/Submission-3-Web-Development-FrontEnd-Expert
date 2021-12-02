@@ -1,5 +1,8 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const ServiceWorkerWebpackPlugin = require("serviceworker-webpack-plugin");
 const path = require("path");
 
@@ -9,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
+  optimization: { minimizer: [new OptimizeCSSAssetsPlugin({ cssProcessorPluginOptions: { preset: ["default", { discardComments: { removeAll: true } }] } })] },
   module: {
     rules: [
       {
@@ -30,8 +34,15 @@ module.exports = {
         },
       ],
     }),
-    new ServiceWorkerWebpackPlugin({
-      entry: path.resolve(__dirname, "src/scripts/sw.js"),
+    new ServiceWorkerWebpackPlugin({ entry: path.resolve(__dirname, "src/scripts/sw.js") }),
+    new ImageminWebpWebpackPlugin({
+      config: [
+        {
+          test: /\.(jpe?g|png)/,
+          options: { quality: 50 },
+        },
+      ],
+      overrideExtension: true,
     }),
   ],
 };

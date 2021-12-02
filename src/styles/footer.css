@@ -1,0 +1,15 @@
+  footer {
+      padding: 16px;
+  }
+
+  footer p {
+      text-align: center;
+      color: black;
+      font-size: 37px;
+      height: 44px;
+  }
+
+  footer p a {
+      color: var(--a);
+      text-decoration: none;
+  }
