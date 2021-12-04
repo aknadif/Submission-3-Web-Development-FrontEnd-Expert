@@ -26,8 +26,12 @@ const CacheHelper = {
   },
 
   async _addCache(request) {
-    const cache = await this._openCache();
-    cache.add(request);
+    try {
+      const cache = await this._openCache();
+      cache.add(request);
+    } catch (error) {
+      console.error(error);
+    }
   },
 
   async _fetchRequest(request) {

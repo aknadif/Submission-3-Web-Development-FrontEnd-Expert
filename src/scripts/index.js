@@ -7,6 +7,8 @@ import "../styles/responsive.css";
 import "../styles/hero.css";
 import "../styles/loader.css";
 import "../styles/footer.css";
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import App from "./views/app";
 import swRegister from "./utils/sw-register";
 

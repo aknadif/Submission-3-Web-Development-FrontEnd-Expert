@@ -7,9 +7,8 @@ class Hero extends HTMLElement {
     this.innerHTML = `
     <section class="hero">
     <picture>
-    <source type="image/webp" srcset="./images/hero-image.webp">
-    <source type="image/jpeg" srcset="./images/hero-image.jpg">
-      <img src="./images/hero-image.jpg" alt="hero">
+      <source media="(max-width: 600px)" type="image/webp" srcset="./images/hero-image-600.webp">
+      <img src="./images/hero-image-1200.webp" alt="hero">
     </picture>
     <div class="text">
         <h1>Burger Pub</h1>

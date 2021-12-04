@@ -37,17 +37,17 @@
 }
 
 .app-bar .app-bar__navigation {
+    transition: all 0.3s;
     position: absolute;
     top: 50px;
     left: -180px;
     width: 150px;
-    transition: all 0.3s;
-    padding: 8px;
-    background-color: var(--a);
     overflow: hidden;
 }
 
 .app-bar .app-bar__navigation.open {
+    padding: 8px;
+    background-color: var(--a);
     left: 0;
     width: 100%;
 }
