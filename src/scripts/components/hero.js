@@ -8,7 +8,7 @@ class Hero extends HTMLElement {
     <section class="hero">
     <picture>
       <source media="(max-width: 600px)" type="image/webp" srcset="./images/hero-image-600.webp">
-      <img src="./images/hero-image-1200.webp" alt="hero">
+      <img class="lazyload" data-src="./images/hero-image-1200.webp" alt="hero">
     </picture>
     <div class="text">
         <h1>Burger Pub</h1>

@@ -11,6 +11,7 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "ignorePatterns": ["e2e/","specs/", "codecept.conf.js","src/public"],
     "rules": {
         "semi": ["error", "always"],
         "quotes": ["error", "double"],

@@ -12,7 +12,7 @@ module.exports = {
   entry: path.resolve(__dirname, "src/scripts/index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
   optimization: { minimizer: [new OptimizeCSSAssetsPlugin({ cssProcessorPluginOptions: { preset: ["default", { discardComments: { removeAll: true } }] } }), new UglifyJsPlugin()] },
   module: {
@@ -27,6 +27,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/templates/index.html"),
       filename: "index.html",
+      favicon: path.resolve(__dirname, "src/public/favicon.ico"),
       title: "Progressive Web Application",
     }),
     new ImageminWebpWebpackPlugin({

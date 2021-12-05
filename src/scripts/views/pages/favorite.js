@@ -19,7 +19,9 @@ const Favorite = {
     const cardsContainer = document.querySelector("#cards");
     if (cards.length === 0) {
       cardsContainer.innerHTML = `
-      <p class="empty">Restaurant favorite kosong, silahkan klik tombol hati di halaman detail.</p>
+      <div class="empty">
+      <p>Restaurant favorite kosong, silahkan klik tombol hati di halaman detail.</p>
+      </div>
       `;
     }
     cards.forEach((card) => {
