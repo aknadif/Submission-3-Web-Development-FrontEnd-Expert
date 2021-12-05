@@ -4,12 +4,12 @@ Before(({ I }) => {
   I.amOnPage("/#/favorite");
 });
 
-xScenario("showing empty favorite cards", ({ I }) => {
+Scenario("showing empty favorite cards", ({ I }) => {
   I.seeElement("#cards");
   I.see("Restaurant favorite kosong, silahkan klik tombol hati di halaman detail.", ".empty");
 });
 
-xScenario("liking one Restaurant.", ({ I }) => {
+Scenario("liking one Restaurant.", ({ I }) => {
   I.see("Restaurant favorite kosong, silahkan klik tombol hati di halaman detail.", ".empty");
   I.amOnPage("/");
   I.seeElement(".card-item__content");
@@ -23,7 +23,7 @@ xScenario("liking one Restaurant.", ({ I }) => {
   I.seeElement(".card-item");
 });
 
-xScenario("unliking one Restaurant.", ({ I }) => {
+Scenario("unliking one Restaurant.", ({ I }) => {
   I.see("Restaurant favorite kosong, silahkan klik tombol hati di halaman detail.", ".empty");
   I.amOnPage("/");
   I.seeElement(".card-item__content");

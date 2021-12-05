@@ -56,6 +56,10 @@
     text-decoration: none;
 }
 
+.card-item .card-item__content a {
+    font-size: 36px;
+}
+
 .card-item .card-item__content p {
     overflow: hidden;
     text-overflow: ellipsis;

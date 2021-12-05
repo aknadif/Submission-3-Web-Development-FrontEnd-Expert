@@ -92,6 +92,9 @@
       .card-item .card-item__content h3 {
         font-size: 22px;
       }
+      .card-item .card-item__content a {
+        font-size: 24px;
+    }
   }
    
   @media screen and (min-width: 1600px) {
